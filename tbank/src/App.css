@@ -3,7 +3,7 @@ body{
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #282c34;
+  background-image: linear-gradient(to right, #282c34 , #1d2025 );
 }
 
 
@@ -48,10 +48,11 @@ body{
   width: 500px;
   height: 500px;
   border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.29);
 
 }
-h2{
-  
+h1{
+ color: #282c34; 
 }
 .Loginpai{
   display: flex;
@@ -65,4 +66,35 @@ h2{
 .Loginpai > input {
   width: 300px;
   margin: 10px;
+  border-style: none;
+  border-radius: 5px;
+}
+.emailesenha{
+  height: 50px;
+  box-shadow: 5px 5px 5px #282c3431;
+  background-color: #F71735;
+  outline:none ;
+}
+.emailesenha:focus{
+  background-color: rgba(255, 255, 255, 0.756);
+  transition: 0.5s;
+}
+::placeholder{
+  color: white;
+}
+.botao{
+  height: 50px;
+  font-size: 130%;
+  box-shadow: 5px 5px 5px #282c342d;
+}
+.botao:hover{
+  scale: 1.05;
+  cursor: pointer;
+  transition: 1s;
+  background-color: rgb(232, 232, 232);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.285);
+}
+.botao:not(hover){
+  transition: 1s;
+  
 }
