@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-//parte principal do app
+//Login
 
 import './App.css';
 import { BrowserRouter
@@ -8,10 +8,12 @@ import { BrowserRouter
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route path = "/Login"/>
-      </Routes>
-      <h1>Testando</h1>
+      <h1>Login</h1>
+      <div className='Loginpai'>
+        <input type='email' placeholder='Insert Email...'></input>
+             <input type = "password" placeholder='Insert Password...'></input>
+             <input type='button' value="Login"></input>
+      </div>
     </div>
   );
 }

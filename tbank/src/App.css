@@ -1,6 +1,11 @@
-.App {
-  text-align: center;
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +40,29 @@
   to {
     transform: rotate(360deg);
   }
+}
+/***********************************************/
+.App {
+  text-align: center;
+  background-color: #F71735;
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+
+}
+h2{
+  
+}
+.Loginpai{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;  
+}
+
+.Loginpai > input {
+  width: 300px;
+  margin: 10px;
 }
