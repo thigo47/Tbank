@@ -10,7 +10,9 @@ function Cadastro() {
           <input type='button' value="Cadastre-se" className='botao'></input>
         </div>
         <footer>
+            <Link to = "/">
             <button className='botaoc'>Login</button>
+            </Link>  
         </footer>
       </div>
   );
