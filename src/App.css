@@ -45,14 +45,17 @@ body{
 .App {
   text-align: center;
   background-color: #F71735;
-  width: 500px;
+  width: auto;
   height: 500px;
   border-radius: 10px;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.29);
+  position: relative;
+
 
 }
 h1{
- color: #282c34; 
+ color: #282c34;
+ text-shadow: 2px 2px 2px #1d202538; 
 }
 .Loginpai{
   display: flex;
@@ -68,6 +71,7 @@ h1{
   margin: 10px;
   border-style: none;
   border-radius: 5px;
+  
 }
 .emailesenha{
   height: 50px;
@@ -76,8 +80,8 @@ h1{
   outline:none ;
 }
 .emailesenha:focus{
-  background-color: rgba(255, 255, 255, 0.756);
-  transition: 0.5s;
+  background-color: #282c34;
+  transition: 1s;
 }
 ::placeholder{
   color: white;
@@ -91,10 +95,40 @@ h1{
   scale: 1.05;
   cursor: pointer;
   transition: 1s;
-  background-color: rgb(232, 232, 232);
+  background-color: #282c34;
+  color: white;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.285);
 }
 .botao:not(hover){
+  transition: 1s;
+  
+}
+footer{
+  background-color:  #F71735;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 20px;
+
+}
+.botaoc{
+  border-style: none;
+  border-radius: 5px;
+  height: 25px;
+  font-size: medium;
+  background-color: #F71735;
+
+}
+.botaoc:hover{
+  scale: 1.05;
+  cursor: pointer;
+  transition: 1s;
+  background-color: #282c34;
+  color: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.285);
+}
+.botaoc:not(hover){
   transition: 1s;
   
 }
