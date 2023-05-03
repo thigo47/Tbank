@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link  ,  Navigate} from 'react-router-dom';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [senha , setSenha] = useState('');
+  const [authenticated , setAuthenticated] = useState(false);
+
 
   function emailSenha() {
     const emailSenha1 = document.getElementById('email');
@@ -24,11 +26,15 @@ function Login() {
         window.alert('Você não se cadastrou ainda!');
       } else {
         window.alert('Você entrou');
-        <Link to = "/BancoInicial"></Link>
+        setAuthenticated(true);
+
       }
     }
+    
   }
-  
+  if(authenticated){
+    return <Navigate to =  "/BancoInicial" />
+  }
   return (
     <div className="App">
       <div className="Loginpai">

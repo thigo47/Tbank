@@ -1,10 +1,10 @@
 import React from 'react';
 import '../App.css';
+import HeaderBanco from "../modules/HeaderBanco"
 function BancoInicial(params) {
     return(
         <>
-            <h1>Tela inicial do banco</h1>
-            <p>Testando</p>
+           <HeaderBanco/>
         </>
     )
 }

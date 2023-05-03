@@ -1,0 +1,18 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body.Headerbanco{
+    background-color: white;
+    height: 100vh;
+    width: 100vh;
+}
+.cabeçalho{
+    background-color: #F71735;
+    width: 100vh;
+    
+}
+body{
+    background-color: white;
+}
