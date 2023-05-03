@@ -27,7 +27,7 @@ function Cadastro() {
           }></input>
 
           <input type='button' value="Cadastre-se" className='botao' onClick={Cadastrando}></input>
-        </div>
+        </div> 
         <footer>
         <Link to = "/">
             <button className='botaoc'>Login</button>

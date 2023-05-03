@@ -24,6 +24,7 @@ function Login() {
         window.alert('Você não se cadastrou ainda!');
       } else {
         window.alert('Você entrou');
+        <Link to = "/BancoInicial"></Link>
       }
     }
   }
@@ -39,9 +40,6 @@ function Login() {
       <footer id="rodape">
         <Link to="/Cadastro">
           <button className="botaoc">Cadastre-se</button>
-        </Link>
-        <Link to="/BancoInicial">
-          <button className="botaoc">Banco</button>
         </Link>
       </footer>
     </div>
