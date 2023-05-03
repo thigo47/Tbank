@@ -1,4 +1,3 @@
-import { Router } from "react-router-dom";
 import React from 'react';
 import '../App.css';
 function BancoInicial(params) {
