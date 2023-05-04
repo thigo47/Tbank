@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import { Link  ,  Navigate} from 'react-router-dom';
+import styles from "../Login.module.css"
+
+
+    
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -36,19 +40,26 @@ function Login() {
     return <Navigate to =  "/BancoInicial" />
   }
   return (
-    <div className="App">
-      <div className="Loginpai">
-        <h1>Login</h1>
-        <input type="email" placeholder="Insert Email..." className="emailesenha" id="email" onChange={(e)=> setEmail(e.target.value)}></input>
-        <input type="password" id="senha" placeholder="Insert Password..." className="emailesenha" onChange={(e)=> setSenha(e.target.value)}></input>
-        <input type="button" value="Login" className="botao" onClick={emailSenha}></input>
+    <div className={styles.Body}>
+<div className={styles.App}>
+      <div className={styles.Loginpai}>
+        <h1 className={styles.titulo}>Login</h1>
+
+        <input type="email" placeholder="Insert Email..."  className={styles.emailesenha} id="email" onChange={(e)=> setEmail(e.target.value)}></input>
+
+        <input type="password" id="senha" placeholder="Insert Password..." className={styles.emailesenha} onChange={(e)=> setSenha(e.target.value)}></input>
+
+        <input type="button" value="Login" className={styles.botao} onClick={emailSenha}></input>
       </div>
-      <footer id="rodape">
+      <footer id="rodape" className={styles.rodape}>
         <Link to="/Cadastro">
-          <button className="botaoc">Cadastre-se</button>
+          <button className={styles.botaoc}>Cadastre-se</button>
         </Link>
       </footer>
     </div>
+      
+    </div>
+    
   );
 }
 
