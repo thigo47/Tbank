@@ -1,9 +1,9 @@
-import styles from  "./Header.module.css"
+import styles from  "../Estilos/Header.module.css"
 
 function HeaderBanco(params) {
  
         return(
-            <div className={styles.body}>
+            <div>
                 <div className={styles.cabeçalho}>
                 <div>Aqui ft</div>
                  <div>Esconder saldo</div>

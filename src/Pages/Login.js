@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Link  ,  Navigate} from 'react-router-dom';
-import styles from "../Login.module.css"
+import { Link  , Navigate} from 'react-router-dom';
+import styles from "../Estilos/Login.module.css"
 
 
     

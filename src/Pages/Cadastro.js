@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import React from 'react';
-import styles from "../Login.module.css"
+import styles from "../Estilos/Login.module.css"
 
 function Cadastro() {
   const [cademail , setCademail] = useState()
