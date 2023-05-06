@@ -11,9 +11,9 @@ function MostarValor() {
 
     return(
         <div className={styles.fundo}>
-        <div>Quanto deseja depositar?</div>
-        <input type = "number" onChange={(e)=>setValord(e.target.value)}></input>
-        <button onClick={MostarValor}>Depositar</button>
+        <div className={styles.pergunta}>Quanto deseja depositar?</div>
+        <input type = "number" className={styles.inputdep} onChange={(e)=>setValord(e.target.value)}></input>
+        <button className={styles.botao} onClick={MostarValor}>Depositar</button>
         </div>
 
     )

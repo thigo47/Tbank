@@ -14,8 +14,30 @@
 }
 
 .ModalConteudo {
-  background-color: white;
+  background-color: #F71735;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  
+}
+
+.botao{
+  border-radius: 20px;
+  border-style: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.336);
+  width: 100px;
+  height: 40px;
+
+
+}
+.botao:hover{
+  background-color: rgba(0, 0, 0, 0.639);
+  scale: 1.1;
+  transition: 0.5s;
+}
+.botao:not(hover){
+  transition: 1s;
+}
+.botao:focus{
+  scale: 0.9;
 }

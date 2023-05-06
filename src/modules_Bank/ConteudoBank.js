@@ -24,7 +24,10 @@ function ConteudoBank() {
             <div className={styles.Modal}>
                 <div className={styles.ModalConteudo}>
                     <Deposito depositar = {depositar}/>
+
                     <button className={styles.botao} onClick={()=> setMostrarModal(false)}>Fechar</button>
+                    
+                    
                 </div>
                 </div>
            )}
