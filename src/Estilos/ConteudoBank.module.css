@@ -1,6 +1,4 @@
-.bodyc{
-  background-color:white;
-}
+
 .Modal {
   position: fixed;
   top: 0;
@@ -40,4 +38,25 @@
 }
 .botao:focus{
   scale: 0.9;
+}
+/*******************corpo******************************/
+
+.container{
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.depesaque{
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.171);
+
 }

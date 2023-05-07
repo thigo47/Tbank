@@ -41,9 +41,14 @@ function ConteudoBank(props) {
         <div>
             <div>Conta</div>
             <div>€ {valorDeposito}</div>
-             <div onClick={handleDeposito}>Deposito</div> 
-             <div onClick={handleSaque}>Saque</div>      
 
+            <div className={styles.container}>
+
+             <div onClick={handleDeposito} className={styles.depesaque}>Deposito</div> 
+
+             <div onClick={handleSaque} className={styles.depesaque}>Saque</div>
+
+            </div>
            {mostrarModal && (
             <div className={styles.Modal}>
                 <div className={styles.ModalConteudo}>
