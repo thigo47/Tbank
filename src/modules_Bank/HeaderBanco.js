@@ -1,4 +1,5 @@
 import styles from  "../Estilos/Header.module.css"
+import { VscEye } from "react-icons/vsc";
 
 function HeaderBanco(params) {
  
@@ -6,8 +7,13 @@ function HeaderBanco(params) {
             <div>
                 <div className={styles.cabeçalho}>
                 <div>Aqui ft</div>
-                 <div>Esconder saldo</div>
+                <div className={styles.saldosuporte}>
+
+                
+                <div className= {styles.visualizar}><VscEye/></div>
                 <div> suporte</div>
+
+                </div>
                 </div>
                 </div>        
         )
