@@ -57,7 +57,7 @@ function ConteudoBank(props) {
             {saqueModal &&(
                     <div className={styles.Modal}>
                         <div className={styles.ModalConteudo}>
-                        <Saque sacar = {sacar}/>
+                        <Saque sacar = {sacar} saldoatual={valorDeposito}/>
 
                         <button className={styles.botao} onClick={()=>setSaqueModal(false)}>fechar</button>
                         </div>

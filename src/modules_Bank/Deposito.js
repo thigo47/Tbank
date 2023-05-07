@@ -6,14 +6,6 @@ function Deposito({depositar}) {
  const [valord , setValord] = useState(0)
  const [saldoAtual, setSaldoAtual] = useState(0);
 
- function sacando(params) {
-
-    const novosaldo = saldoAtual - Number(valord);
-    setSaldoAtual(novosaldo);
-    
-    window.alert(`Você Sacou:  ${novosaldo}`)
-}
-
 
 function MostarValor() {
     if (valord.length == 0) {
@@ -40,7 +32,6 @@ function MostarValor() {
         <input type = "number" className={styles.inputdep} onChange={(e)=>setValord(e.target.value)}></input>
 
         <button className={styles.botao} onClick={MostarValor}>Depositar</button>
-        <Saque sacando={sacando}/>
         </div>
         
 
