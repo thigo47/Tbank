@@ -16,7 +16,7 @@ function ConteudoBank(props) {
 
     const [valorSaque , setValorSaque] = useState(0);
 
-    const [valorSaldo , setValorSaldo] = useState(0); 
+
 
     function depositar(valor) {
         
@@ -26,10 +26,7 @@ function ConteudoBank(props) {
         setValorSaque(valor)
     }
 
-    
-    function saldodeposito() {
-        setValorSaldo(valorDeposito)
-    }
+
 
 // mostrar ou nao o modal
     const handleDeposito = () => {
@@ -43,14 +40,14 @@ function ConteudoBank(props) {
     return(
         <div>
             <div>Conta</div>
-            <div>€ {valorSaldo}</div>
+            <div>€ {valorDeposito}</div>
              <div onClick={handleDeposito}>Deposito</div> 
              <div onClick={handleSaque}>Saque</div>      
 
            {mostrarModal && (
             <div className={styles.Modal}>
                 <div className={styles.ModalConteudo}>
-                    <Deposito depositar = {depositar} saldodeposito = {saldodeposito}/>
+                    <Deposito depositar = {depositar}/>
 
                     <button className={styles.botao} onClick={()=> setMostrarModal(false)}>Fechar</button>     
                 </div>

@@ -1,15 +1,12 @@
 import { useState } from "react"
 import styles from "../Estilos/Deposito.module.css"
 
-function Saque({sacar , saldosaque}) {
+function Saque({sacando}) {
     const [valorSaque , SetValorsaque] = useState(0)
+function handleclick(params) {
+    sacando();
+}
 
-    function saque() {
-        saldosaque()
-        window.alert(`Você Sacou:  ${valorSaque}`)
-        sacar(valorSaque)
-        
-    }
     return(
         <div className={styles.fundo}>
             <div className={styles.pergunta}>
@@ -17,7 +14,7 @@ function Saque({sacar , saldosaque}) {
             </div>
             <input type="number" className={styles.inputdep}onChange={(e)=> SetValorsaque(e.target.value)}></input>
 
-            <button className={styles.botao} onClick={saque}>Saque</button>
+            <button className={styles.botao} onClick={handleclick}>Saque</button>
         </div>
     )
 }
