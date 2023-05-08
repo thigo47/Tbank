@@ -14,7 +14,7 @@ function HeaderBanco(params) {
                 
                 <div className= {styles.visualizar}><VscEye/></div>
                 
-                <div> <VscInfo/></div>
+                <div className={styles.info}> <VscInfo/></div>
 
                 </div>
                 </div>

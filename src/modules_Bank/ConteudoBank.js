@@ -4,7 +4,7 @@ import styles from "../Estilos/ConteudoBank.module.css"
 import Saque from "./Saque";
 
 
-function ConteudoBank(props) {
+function ConteudoBank() {
     
     const [mostrarModal , setMostrarModal] = useState(false);
 
@@ -16,6 +16,8 @@ function ConteudoBank(props) {
 
     const [valorSaque , setValorSaque] = useState(0);
 
+    //ideia , eu ter dois arrays , quando eu depositar : hisdeposito= [] , e saque , hissaque = [] , senpre que eeu depositar eu guardo o valor.
+    
 
 
     function depositar(valor) {
@@ -23,7 +25,16 @@ function ConteudoBank(props) {
         setValorDeposito (valor);
     }
     function sacar(valor) {
-        setValorSaque(valor)
+        if ( valorDeposito < valorSaque || valorDeposito == 0) {
+            window.alert("Saldo insuficiente")
+        } else {
+            const valorsaldosaque =  valorDeposito - valor
+            
+            setValorSaque(valor)
+            setValorDeposito(valorsaldosaque)
+            window.alert(`Você sacou: ${valor}`);
+        }
+        
     }
 
 
@@ -39,9 +50,12 @@ function ConteudoBank(props) {
 
     return(
         <div>
-            <div>Conta</div>
-            <div>€ {valorDeposito}</div>
+            <div className={styles.historico}>
 
+            <div>Conta</div>
+            <div>{valorDeposito.toLocaleString('pt', {style: 'currency', currency: 'EUR'})}</div>
+            </div>
+            
             <div className={styles.container}>
 
              <div onClick={handleDeposito} className={styles.depesaque}>Deposito</div> 
@@ -62,7 +76,7 @@ function ConteudoBank(props) {
             {saqueModal &&(
                     <div className={styles.Modal}>
                         <div className={styles.ModalConteudo}>
-                        <Saque sacar = {sacar} saldoatual={valorDeposito}/>
+                        <Saque  sacar={sacar} valor={valorDeposito} setValorDeposito={setValorDeposito}/>
 
                         <button className={styles.botao} onClick={()=>setSaqueModal(false)}>fechar</button>
                         </div>

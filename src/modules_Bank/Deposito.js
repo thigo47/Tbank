@@ -3,7 +3,7 @@ import styles from "../Estilos/Deposito.module.css"
 import Saque from "./Saque";
 
 function Deposito({depositar}) {
- const [valord , setValord] = useState(0)
+ const [valord , setValord] = useState()
  const [saldoAtual, setSaldoAtual] = useState(0);
 
 
@@ -29,7 +29,7 @@ function MostarValor() {
 
         <div className={styles.pergunta}>Quanto deseja depositar?</div>
 
-        <input type = "number" className={styles.inputdep} onChange={(e)=>setValord(e.target.value)}></input>
+        <input type = "number" className={styles.inputdep} onChange={(e)=>setValord(e.target.value)} placeholder="€" ></input>
 
         <button className={styles.botao} onClick={MostarValor}>Depositar</button>
         </div>

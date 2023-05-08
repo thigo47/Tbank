@@ -49,8 +49,12 @@
   justify-content: space-between;
   align-items: center;
 }
+.historico{
+  width: 50%;
+  cursor: pointer;
+}
 .depesaque{
-  background-color: red;
+  background-image: radial-gradient( #641220 , #891121);
   height: 100px;
   width: 100px;
   border-radius: 50px;
@@ -58,5 +62,25 @@
   justify-content: center;
   align-items: center;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.171);
+  animation: move 2s infinite;
+  transition: 1s;
+  cursor: pointer;
+
+}
+/*
+@keyframes move{
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(200px);
+  }
+  100%{
+    transform: translate(0);
+  }
+}*/
+
+.depesaque:hover{
+  transform: scale3d(1.2, 1.2, 1.2);
 
 }

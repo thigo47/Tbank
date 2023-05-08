@@ -1,14 +1,17 @@
 import { useState } from "react"
 import styles from "../Estilos/Deposito.module.css"
 
-function Saque({ saldoAtual, sacar }) {
-    const [valorSaque, setValorSaque] = useState(0);
+function Saque(props) {
+    const [valordigitado , setValordigitado] = useState()
   
     function handleclick() {
-      const novoSaldo = saldoAtual - Number(valorSaque);
-      setValorSaque(); // reseta o valor do saque
-      sacar(novoSaldo); // atualiza o saldo na função sacar em ConteudoBank
-      window.alert(`Você sacou: ${valorSaque} Novo saldo: ${novoSaldo}`);
+      
+      props.sacar(valordigitado)
+    }
+    function handlechange(e) {
+      setValordigitado(e.target.value)
+      
+            
     }
   //aida nao resolvido saque
     return (
@@ -18,8 +21,7 @@ function Saque({ saldoAtual, sacar }) {
         <input
           type="number"
           className={styles.inputdep}
-          onChange={(e) => setValorSaque(e.target.value)}
-          value={valorSaque} // exibe o valor do saque atualizado
+          onChange={handlechange} placeholder="€"
         ></input>
 
         <button className={styles.botao} onClick={handleclick}>

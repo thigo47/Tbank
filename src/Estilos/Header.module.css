@@ -7,7 +7,7 @@
 
 
 .cabeçalho{
-    background-color: #F71735;
+    background-image: linear-gradient(to top , #641220 , #E01E37);
     display: flex;
     height: 100px;
     justify-content: space-between;
@@ -17,6 +17,9 @@
 .foto{
     font-size: xx-large;
     margin-left: 10px;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
 }
 .saldosuporte{
     display: flex;
@@ -28,4 +31,12 @@
 }
 .visualizar{
     font-size: xx-large;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+}
+.info{
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
 }
