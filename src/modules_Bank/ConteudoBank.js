@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Deposito from "./Deposito"
 import styles from "../Estilos/ConteudoBank.module.css"
 import Saque from "./Saque";
+import Historico from "./Historico";
 
 
 function ConteudoBank() {
@@ -10,29 +11,47 @@ function ConteudoBank() {
 
     const [saqueModal , setSaqueModal] = useState(false);
 
+    const [hisModal , setHisModal] = useState(false);
+
+    const [historico , setHistorico] = useState()
+
     // logica de lifting
 
     const [valorDeposito , setValorDeposito] = useState(0);
 
     const [valorSaque , setValorSaque] = useState(0);
+    
 
+    const hisdep = []
+    const hissaque = []
     //ideia , eu ter dois arrays , quando eu depositar : hisdeposito= [] , e saque , hissaque = [] , senpre que eeu depositar eu guardo o valor.
     
 
 
-    function depositar(valor) {
+    function depositar(valor , valord) {
         
         setValorDeposito (valor);
+        setHistorico(prevHistorico => {
+            return {
+              ...prevHistorico,
+              hisdep: [...prevHistorico.hisdep, valord]
+            }
+          });
+          console.log(hisdep)
+        //ainda nao finalizado historico
     }
     function sacar(valor) {
         if ( valorDeposito < valorSaque || valorDeposito == 0) {
             window.alert("Saldo insuficiente")
         } else {
-            const valorsaldosaque =  valorDeposito - valor
+            const valorsaldosaque = valorDeposito - valor
             
             setValorSaque(valor)
             setValorDeposito(valorsaldosaque)
             window.alert(`Você sacou: ${valor}`);
+            hissaque.push(valor)
+            console.log(hissaque)
+
         }
         
     }
@@ -47,12 +66,15 @@ function ConteudoBank() {
     const handleSaque = ()=>{
         setSaqueModal(true)
     }
+    const handleHis = ()=>{
+        setHisModal(true)
+    }
 
     return(
         <div>
             <div className={styles.historico}>
+            <div onClick={handleHis}>Conta</div>
 
-            <div>Conta</div>
             <div>{valorDeposito.toLocaleString('pt', {style: 'currency', currency: 'EUR'})}</div>
             </div>
             
@@ -82,6 +104,18 @@ function ConteudoBank() {
                         </div>
                         
                     </div>
+            )
+
+            }
+            {hisModal && (
+                 <div className={styles.Modal}>
+                 <div className={styles.ModalConteudo}>
+                 <Historico hisdep  ={hisdep} hissaque = {hissaque}/>
+
+                 <button className={styles.botao} onClick={()=>setHisModal(false)}>fechar</button>
+                 </div>
+                 
+             </div>
             )
 
             }

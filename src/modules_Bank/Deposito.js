@@ -17,7 +17,7 @@ function MostarValor() {
     setSaldoAtual(novosaldo);
 
         window.alert(`Valor de ${valord} depositado!`)
-        depositar(novosaldo)
+        depositar(novosaldo , valord)
 
        
     }
