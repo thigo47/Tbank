@@ -1,8 +1,7 @@
 import { useState } from "react"
 import styles from "../Estilos/Deposito.module.css"
-import Saque from "./Saque";
 
-function Deposito({depositar}) {
+function Deposito({depositar , setHistorico ,historico}) {
  const [valord , setValord] = useState()
  const [saldoAtual, setSaldoAtual] = useState(0);
 
@@ -15,9 +14,12 @@ function MostarValor() {
 
     const novosaldo = saldoAtual + Number(valord);
     setSaldoAtual(novosaldo);
+//  setHistorico(valord)
+//console.log(historico)
 
         window.alert(`Valor de ${valord} depositado!`)
         depositar(novosaldo , valord)
+        
 
        
     }

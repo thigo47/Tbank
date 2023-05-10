@@ -1,9 +1,9 @@
-function Historico({hisdep , hissaque}) {
-    console.log(hisdep)
+function Historico({historico , setHistorico}) {
+    console.log(historico)
     
     return(
         <>
-        
+        <h1>{historico}</h1>
         </>
     )
 }

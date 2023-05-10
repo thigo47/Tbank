@@ -55,7 +55,7 @@
   cursor: pointer;
 }
 .depesaque{
-  background-image: radial-gradient( #641220 , #891121);
+  background-image: radial-gradient( #de1b35 , #a40d21);
   height: 100px;
   width: 100px;
   border-radius: 50px;
@@ -83,5 +83,6 @@
 
 .depesaque:hover{
   transform: scale3d(1.2, 1.2, 1.2);
+  background-image: radial-gradient( #f82a46 , #a70013);
 
 }

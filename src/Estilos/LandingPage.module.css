@@ -1,0 +1,25 @@
+.body{
+    background-image: radial-gradient(#282c34 , #1d2025 );
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card1{
+    width: 300px;
+    height: 300px;
+    background-color: #F71735;
+    border-radius: 10px;
+}
+.card2{
+    width: 300px;
+    height: 300px;
+    background-color: #F71735;
+    border-radius: 10px;
+}
+.ftbolsa{
+    width: 50%;
+    height: 50%;
+}

@@ -7,7 +7,7 @@
 
 
 .cabeçalho{
-    background-image: linear-gradient(to top , #641220 , #E01E37);
+    background-image: linear-gradient(to bottom , #F71735 , #c31a31);
     display: flex;
     height: 100px;
     justify-content: space-between;

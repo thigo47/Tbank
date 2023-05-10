@@ -13,7 +13,7 @@ function ConteudoBank() {
 
     const [hisModal , setHisModal] = useState(false);
 
-    const [historico , setHistorico] = useState()
+    const [historico , setHistorico] = useState(0);
 
     // logica de lifting
 
@@ -28,16 +28,10 @@ function ConteudoBank() {
     
 
 
-    function depositar(valor , valord) {
+    function depositar(valor) {
         
         setValorDeposito (valor);
-        setHistorico(prevHistorico => {
-            return {
-              ...prevHistorico,
-              hisdep: [...prevHistorico.hisdep, valord]
-            }
-          });
-          console.log(hisdep)
+        
         //ainda nao finalizado historico
     }
     function sacar(valor) {
@@ -55,7 +49,6 @@ function ConteudoBank() {
         }
         
     }
-
 
 
 // mostrar ou nao o modal
@@ -88,7 +81,7 @@ function ConteudoBank() {
            {mostrarModal && (
             <div className={styles.Modal}>
                 <div className={styles.ModalConteudo}>
-                    <Deposito depositar = {depositar}/>
+                    <Deposito depositar = {depositar} historico  ={historico}  setHistorico = {setHistorico} />
 
                     <button className={styles.botao} onClick={()=> setMostrarModal(false)}>Fechar</button>     
                 </div>
@@ -107,10 +100,10 @@ function ConteudoBank() {
             )
 
             }
-            {hisModal && (
+            {/*hisModal && (
                  <div className={styles.Modal}>
                  <div className={styles.ModalConteudo}>
-                 <Historico hisdep  ={hisdep} hissaque = {hissaque}/>
+                 <Historico historico = {historico} setHistorico = {setHistorico}/>
 
                  <button className={styles.botao} onClick={()=>setHisModal(false)}>fechar</button>
                  </div>
@@ -118,7 +111,7 @@ function ConteudoBank() {
              </div>
             )
 
-            }
+            */}
         </div>
     )
 }
