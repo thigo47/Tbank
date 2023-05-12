@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { Link  , Navigate} from 'react-router-dom';
 import styles from "../Estilos/Login.module.css"
+import FlashMessage from "../modules_Bank/FlashMessage";
 
-
-    
 
 function Login() {
   const [email, setEmail] = useState('');
   const [senha , setSenha] = useState('');
   const [authenticated , setAuthenticated] = useState(false);
+  const [mostrarmensagem , setMostrarMensagem] = useState(false)
 
 
   function emailSenha() {
@@ -29,20 +29,31 @@ function Login() {
       } else if (cadEmail.length === 0 || cadSenha.length === 0) {
         window.alert('Você não se cadastrou ainda!');
       } else {
-        window.alert('Você entrou');
+        setMostrarMensagem(true)
         setAuthenticated(true);
+        
+        setTimeout(()=>{
+          setMostrarMensagem(false);
+        }, 5000);
 
       }
     }
     
   }
   if(authenticated){
-    return <Navigate to =  "/BancoInicial" />
-  }
+    return (
+      <Navigate to = "/BancoInicial"/>
+    )
+    }
   return (
     <div className={styles.Body}>
 <div className={styles.App}>
       <div className={styles.Loginpai}>
+        {mostrarmensagem&&(
+          <FlashMessage/>
+        )
+
+        }
         <h1 className={styles.titulo}>Login</h1>
 
         <input type="email" placeholder="Insert Email..."  className={styles.emailesenha} id="email" onChange={(e)=> setEmail(e.target.value)}></input>
