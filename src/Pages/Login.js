@@ -29,12 +29,11 @@ function Login() {
       } else if (cadEmail.length === 0 || cadSenha.length === 0) {
         window.alert('Você não se cadastrou ainda!');
       } else {
-        setMostrarMensagem(true)
-        setAuthenticated(true);
         
         setTimeout(()=>{
-          setMostrarMensagem(false);
-        }, 5000);
+        setMostrarMensagem(true);
+        setAuthenticated(true);
+        }, 2000);
 
       }
     }
