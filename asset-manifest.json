@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Tbank/static/css/main.898cee95.css",
+    "main.js": "/Tbank/static/js/main.9c93c3f4.js",
+    "static/js/787.c5839ead.chunk.js": "/Tbank/static/js/787.c5839ead.chunk.js",
+    "static/media/Moeda.jpg": "/Tbank/static/media/Moeda.e32d1b59c9b1666f6f37.jpg",
+    "static/media/logo.svg": "/Tbank/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Tbank/index.html",
+    "main.898cee95.css.map": "/Tbank/static/css/main.898cee95.css.map",
+    "main.9c93c3f4.js.map": "/Tbank/static/js/main.9c93c3f4.js.map",
+    "787.c5839ead.chunk.js.map": "/Tbank/static/js/787.c5839ead.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.898cee95.css",
+    "static/js/main.9c93c3f4.js"
+  ]
+}
