@@ -30,7 +30,7 @@ function Cadastro() {
           <input type='button' value="Cadastre-se" className={styles.botao} onClick={Cadastrando}></input>
         </div> 
         <footer className={styles.rodape}>
-        <Link to = "/">
+        <Link to = "/Login">
             <button className={styles.botaoc}>Login</button>
             </Link>  
         </footer>

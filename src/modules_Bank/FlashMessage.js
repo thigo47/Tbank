@@ -1,7 +1,8 @@
-function FlashMessage(){
+import styles from "../Estilos/Flashmessage.module.css"
+function FlashMessage({mensagem}){
     return(
         <>
-        <h1>Teste</h1>
+        <p className={styles.mensagem}>{mensagem}</p>
         </>
     )
 }

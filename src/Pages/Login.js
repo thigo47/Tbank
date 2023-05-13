@@ -8,7 +8,10 @@ function Login() {
   const [email, setEmail] = useState('');
   const [senha , setSenha] = useState('');
   const [authenticated , setAuthenticated] = useState(false);
-  const [mostrarmensagem , setMostrarMensagem] = useState(false)
+  const [mostrarmensagem , setMostrarMensagem] = useState(false);
+  const [mostrarvazio , setMostrarVazio] = useState(false);
+  const [emailcorreto , setEmailCorreto] = useState(false);
+  const [senhaincorreta , setSenhaIncorreta] = useState(false);
 
 
   function emailSenha() {
@@ -16,30 +19,52 @@ function Login() {
     const emailSenha2 = document.getElementById('senha');
 
     if (emailSenha1.value.length === 0 || emailSenha2.value.length === 0) {
-      window.alert('Adicione as informações primeiro');
+      setMostrarVazio(true);
+
+      setTimeout(()=>{
+        setMostrarVazio(false);
+      }, 3000);
+
+    
+
+
     } else {
       console.log(`email: ${email} senha: ${senha}`);
       const cadEmail = localStorage.getItem('email');
       const cadSenha = localStorage.getItem('senha');
 
       if (email !== cadEmail) {
-        window.alert('Email incorreto.');
+        setEmailCorreto(true)
+
+        setTimeout(()=>{
+          setEmailCorreto(false)
+        },3000)
+
       } else if (senha !== cadSenha) {
-        window.alert('Senha incorreta');
+
+        setSenhaIncorreta(true)
+
+        setTimeout(()=>{
+          setSenhaIncorreta(false)
+        }, 3000)
+
       } else if (cadEmail.length === 0 || cadSenha.length === 0) {
         window.alert('Você não se cadastrou ainda!');
       } else {
         
-        setTimeout(()=>{
+       
         setMostrarMensagem(true);
+        setTimeout(()=>{
+        setMostrarMensagem(false)
         setAuthenticated(true);
-        }, 2000);
+        }, 500);
 
       }
     }
     
   }
   if(authenticated){
+    
     return (
       <Navigate to = "/BancoInicial"/>
     )
@@ -49,7 +74,22 @@ function Login() {
 <div className={styles.App}>
       <div className={styles.Loginpai}>
         {mostrarmensagem&&(
-          <FlashMessage/>
+          <FlashMessage mensagem="Login efetuado com sucesso!"/>
+        )
+
+        }
+        {mostrarvazio&&(
+          <FlashMessage mensagem="Adicione as informações primeiro."/>
+        )
+
+        }
+        {emailcorreto &&(
+          <FlashMessage mensagem="Email incorreto."/>
+        )
+          
+        }
+        {senhaincorreta &&(
+          <FlashMessage mensagem="Senha incorreta."/>
         )
 
         }
